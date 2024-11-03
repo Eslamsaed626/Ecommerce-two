@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root {
+    --main-color: #fcb700;
+    --dark-color: #222222;
+    --parg-color: #666666;
+    --dark-red: #d01418;
+    --border-color: #6666662a;
+    --name-item: #0066c0;
+}
+
+
+body {
+    background-color: #f5f6f9;
+    margin-top: 180px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark-color);
+}
+
+p {
+    color: var(--parg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+
+header .top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+
+header .search {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+}
+
+header .search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px 10px;
+}
+
+header .search button {
+    outline: none;
+    border: none;
+    padding: 18px 40px;
+    background-color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+header .top_header .cart_header {
+    display: flex;
+    align-items: center;
+}
+
+
+header .top_header .cart_header .icon_cart {
+    margin-right: 24px;
+}
+
+header .top_header .cart_header .icon_cart button {
+    background: #fff;
+    padding: 5px 10px;
+    outline: none;
+    color: #000;
+    box-shadow: none;
+    border: none;
+}
+
+header .top_header .cart_header .icon_cart button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+header .top_header .cart_header .total_price p {
+    margin-bottom: 4px;
+}
+
+
+
+
+/* navbar */
+
+.navbar .navbar-nav li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.navbar .navbar-nav li::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav li.active:after,
+.navbar .navbar-nav li:hover:after {
+    width: 100%;
+}
+
+.acount a {
+    text-decoration: none;
+    color: var(--darc-color);
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+
+/* navbar */
+
+
+
+/* cart */
+aside {
+    width: 420px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 100;
+    padding: 20px;
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+aside.active {
+    right: 0px
+}
+
+
+aside .top_cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside .top_cart h4 {
+    margin: 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+aside .top_cart h4 span {
+    color: #898585;
+    font-size: 16px;
+}
+
+aside .top_cart i {
+    font-size: 21px;
+    cursor: pointer;
+}
+
+aside .items_in_cart {
+    border-block: 1px solid var(--border-color);
+    padding: 20px 0;
+    margin-block: 20px;
+    height: 100%;
+}
+
+
+aside .cart_bottom .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside .cart_bottom .button_cart {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+aside .cart_bottom .button_cart .btn_cart {
+    text-decoration: none;
+    background: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px;
+    border: 2px solid var(--main-color);
+    background: var(--main-color);
+    color: var(--dark-color);
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+aside .cart_bottom .button_cart a:hover {
+    background: transparent;
+}
+
+aside .cart_bottom .button_cart button {
+    background: transparent !important;
+}
+
+
+aside .cart_bottom .button_cart button:hover {
+    background: var(--main-color) !important;
+}
+
+
+.items_in_cart .item_cart {
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
+    margin-bottom: 15px;
+}
+
+
+.items_in_cart .item_cart img {
+    width: 110px;
+}
+
+.items_in_cart .item_cart div {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+
+
+.items_in_cart .item_cart div span {
+    color: #787873;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.items_in_cart .item_cart i {
+    border: 1px solid #333;
+    padding: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* cart */
+
+
+
+
+
+/* slider */
+.slider .side_bar {
+    background-color: #fff;
+}
+
+.slider .side_bar h2 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+}
+
+.slider .side_bar h2 i {
+    margin-right: 10px;
+}
+
+.slider .side_bar a {
+    display: block;
+    text-decoration: none;
+    padding: 7px 10px;
+    border-top: 1px solid #ddd;
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.slider .side_bar a:hover {
+    color: var(--main-color);
+}
+
+.slide-swp {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-wrapper {
+    height: 400xp;
+}
+
+.swiper-slide {
+    height: 100%;
+}
+
+
+.swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+}
+
+.slide-swp .swiper-pagination span {
+    opacity: 1;
+    background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+    background: #d1e425 !important;
+    width: 35px;
+    height: 8px;
+    border-radius: 30px;
+}
+
+/* slider */
+
+
+/* feature */
+.features {
+    margin: 50px 0;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features .container .feature-item {
+    text-align: center;
+    background: #fff;
+    padding: 15px 25px;
+    width: 18%;
+    border-radius: 4px;
+}
+
+
+.features .container .feature-item h4 {
+    font-size: 18px;
+}
+
+
+.features .container .feature-item p {
+    font-size: 16px;
+}
+
+/* feature */
