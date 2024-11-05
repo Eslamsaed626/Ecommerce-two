@@ -12,8 +12,9 @@ clos_cart.addEventListener("click", closeCart)
 
 
 
-var all_product_json;
+let all_product_json;
 let product_cart = [];
+let count_item = document.querySelector(".icon_cart span");
 // functions
 
 
