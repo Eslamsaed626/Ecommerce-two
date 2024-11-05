@@ -125,11 +125,9 @@ function remove_from_cart(index) {
     for (let i = 0; i < addCartBtn.length; i++) {
 
         addCartBtn[i].classList.remove("active")
-        product_cart.forEach((Element) => {
-            if (Element.id === i) {
-                // addCartBtn.classList.add("active")
-                console.log(element);
-
+        product_cart.forEach((element) => {
+            if (element.id === i) {
+                addCartBtn[i].classList.add("active")
             }
         })
     }
