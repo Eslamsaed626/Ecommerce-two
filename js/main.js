@@ -91,29 +91,49 @@ function addToCart(id, btn) {
 function getItemsCart() {
     let items_c = "";
     for (let i = 0; i < product_cart.length; i++) {
-        items_c = `
+        items_c += `
              <div class="item_cart">
                 <img src="${product_cart[i].img}">
                 <div>
                     <p>${product_cart[i].name}</p>
                     <span>$${product_cart[i].price}</span>
                 </div>
-                <i class="fa-solid fa-trash" onclick="remove_from_cart(${product_cart[i].id})"></i>
+               <button>
+               <i class="fa-solid fa-trash" onclick="remove_from_cart(${i})"></i>
+               </button> 
             </div>
         `
     }
-    inCart.innerHTML += items_c
+
+    console.log(items_c);
+
+    inCart.innerHTML = items_c
 }
 
 
 function remove_from_cart(index) {
-    console.log(product_cart);
-
-    console.log(index);
-
-
 
     product_cart.splice(index, 1);
     console.log(product_cart);
-    // getItemsCart();
+    // inCart.innerHTML = "";
+    getItemsCart();
+
+
+    const addCartBtn = document.querySelectorAll(".fa-cart-shopping");
+    console.log(addCartBtn);
+
+    for (let i = 0; i < addCartBtn.length; i++) {
+
+        addCartBtn[i].classList.remove("active")
+        product_cart.forEach((Element) => {
+            if (Element.id === i) {
+                // addCartBtn.classList.add("active")
+                console.log(element);
+
+            }
+        })
+    }
+    console.log(addCartBtn);
+
+
 }

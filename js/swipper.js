@@ -12,13 +12,13 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-var swiper = new Swiper(".sale_sec", {
+var swiper2 = new Swiper(".sale_sec", {
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        dynamicBullests: true,
-        clickable: true
-    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     dynamicBullests: true,
+    //     clickable: true
+    // },
     slidesPerView: 5,
     spaceBetween: 20,
     autoplay: {
