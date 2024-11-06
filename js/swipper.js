@@ -14,14 +14,26 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper2 = new Swiper(".sale_sec", {
     loop: true,
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     dynamicBullests: true,
-    //     clickable: true
-    // },
     slidesPerView: 5,
     spaceBetween: 20,
     autoplay: {
         delay: 2000
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
+
+var swiper2 = new Swiper(".product_swip", {
+    loop: true,
+    slidesPerView: 5,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 2000
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
     }
 });

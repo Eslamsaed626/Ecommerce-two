@@ -14,7 +14,11 @@ clos_cart.addEventListener("click", closeCart)
 
 let all_product_json;
 let product_cart = [];
-let count_item = document.querySelector(".icon_cart span");
+let count_item = document.querySelector(".price_cart_head");
+let total_item = document.querySelector(".icon_cart span");
+
+let count_item_cart = document.querySelector(".top_cart span");
+let total_item_cart = document.getElementById("cart_price");
 // functions
 
 
@@ -34,7 +38,12 @@ fetch('./js/items.json')
     .then(response => response.json())
     .then(data => {
         all_product_json = data;
+
         const products = document.querySelector(".products");
+        const other_product_swiper = document.getElementById("other_product_swiper");
+
+
+
         data.forEach(product => {
             if (product.old_price) {
 
@@ -90,6 +99,7 @@ function addToCart(id, btn) {
 }
 
 function getItemsCart() {
+    let total_price = 0;
     let items_c = "";
     for (let i = 0; i < product_cart.length; i++) {
         items_c += `
@@ -103,11 +113,17 @@ function getItemsCart() {
                <i class="fa-solid fa-trash" onclick="remove_from_cart(${i})"></i>
                </button> 
             </div>
-        `
+        `;
+        total_price += product_cart[i].price;
     }
 
-    console.log(items_c);
+    total_item.innerHTML = product_cart.length;
+    count_item.innerHTML = `$${total_price}`
 
+
+
+    count_item_cart.innerHTML = `(${product_cart.length} items in cart)`;
+    total_item_cart.innerHTML = `$${total_price}`
     inCart.innerHTML = items_c
 }
 

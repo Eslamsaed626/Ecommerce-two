@@ -436,6 +436,14 @@ aside .cart_bottom .button_cart button:hover {
     left: 150%;
 }
 
+
+.banner_big.banner .container .banner_img {
+    width: 49%;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
 /* banner */
 
 
