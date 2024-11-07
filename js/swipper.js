@@ -25,7 +25,7 @@ var swiper2 = new Swiper(".sale_sec", {
     }
 });
 
-var swiper2 = new Swiper(".product_swip", {
+var swiper3 = new Swiper(".product_swip", {
     loop: true,
     slidesPerView: 5,
     spaceBetween: 20,

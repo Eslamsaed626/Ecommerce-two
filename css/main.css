@@ -638,4 +638,19 @@ aside .cart_bottom .button_cart button:hover {
     text-decoration: line-through;
 }
 
+
+
+
 /* slide sale */
+
+
+/*  */
+
+.slide_product .slide_with_img {
+    display: flex;
+    align-items: center;
+}
+
+.slide_product .slide_with_img .categ_img {
+    margin-right: 26px;
+}

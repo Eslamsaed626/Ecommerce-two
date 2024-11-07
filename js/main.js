@@ -79,9 +79,49 @@ fetch('./js/items.json')
                 `
             }
         });
+
+
+
+        data.forEach(product => {
+            // if (product.old_price) {
+
+            // const percent = Math.floor((product.old_price - product.price) / product.old_price * 100)
+
+            other_product_swiper.innerHTML += `
+                <div class="product swiper-slide">
+                        <div class="icons">
+                            <i class="fa-solid fa-cart-shopping"onclick="addToCart(${product.id},this)"></i>
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-share"></i>
+                        </div>
+                        <div class="img_product">
+                            <img src="${product.img}">
+                            <img src="${product.img_hover}" class="img_hover">
+                        </div>
+                        <h3 class="name_product">
+                            <a href="#">${product.name}</a>
+                        </h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <p>$${product.price}</p>
+                        </div>
+                    </div>
+                `;
+            // }
+        });
+
+
+
+
+
+
     })
-
-
 
 // add item to cart 
 
